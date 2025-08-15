@@ -5,6 +5,6 @@ import { index } from '../controllers/home.controller.js';
 const router = Router();
 
 router.use('/users', userRoutes);
-// router.get('/', index)
+router.get('/', index)
 
 export default router;

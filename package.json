@@ -2,7 +2,6 @@
   "name": "express-test-project",
   "version": "1.0.0",
   "main": "src/server.js",
-  "type": "module",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
@@ -14,7 +13,8 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "mysql2": "^3.14.3",
-    "sequelize": "^6.37.7"
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

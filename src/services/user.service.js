@@ -5,5 +5,12 @@ export async function getAllUsers() {
 }
 
 export async function createUser(data) {
-    return await User.create(data);
+    let user;
+    try {
+        user = await User.create(data);
+        console.log('User Created');
+    } catch (error) {
+        console.error('Error creating user:', error);
+    }
+    return user;    
 }
