@@ -31,7 +31,6 @@ const User = db.User;
   export async function login({ email, password }) {
     try{
       const user = await User.findOne({ where: { email } });
-    
       if (!user){
         const err = new Error("Invalid Credentials");
         err.status = 401;
@@ -44,6 +43,7 @@ const User = db.User;
         throw err;
       }
       const token = jwt.generateToken({ id: user.id, role: user.role });
+      
     return {
        type: 'success',
        data: { token, user }

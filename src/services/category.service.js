@@ -8,7 +8,8 @@ export async function getAllCategories() {
         const categories = await Category.findAll();
         return {
         type: 'success',
-        data: categories
+        data: categories,
+        ...(categories.length === 0 && { message: 'No categories found' })
      };
     }catch(error){
        throw error

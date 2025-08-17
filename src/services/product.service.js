@@ -18,9 +18,11 @@ export async function getProducts(filters = {}) {
       where,
       order
     });
+    
     return {
       type: 'success',
-      data: products
+      data: products,
+      ...(products.length === 0 && { message: 'No products found' })
     };
   } catch (error) {
     throw error
