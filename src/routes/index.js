@@ -1,10 +1,15 @@
 import { Router } from 'express';
-import userRoutes from './user.routes.js';
-import { index } from '../controllers/home.controller.js';
+import authRoutes from './auth.routes.js';
+import productRoutes from './product.routes.js';
+import categoryRoutes from './category.routes.js';
+
 
 const router = Router();
 
-router.use('/users', userRoutes);
-router.get('/', index)
+
+router.use('/auth', authRoutes);
+router.use('/products', productRoutes);
+router.use('/categories', categoryRoutes);
+
 
 export default router;

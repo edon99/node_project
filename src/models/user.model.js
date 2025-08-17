@@ -11,10 +11,15 @@ const User = sequelize.define('User', {
     unique: true,
     allowNull: false
   },
+  role: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   password: {
     type: DataTypes.STRING,
     allowNull: false
   }
+
 }, {
   timestamps: true
 });
